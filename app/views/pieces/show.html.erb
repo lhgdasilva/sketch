@@ -10,6 +10,14 @@
   <%= image_tag @piece.url %>
 </p>
 
+<h2>Comments</h2>
+<% @piece.comments.each do |comment| %>
+
+  <p>
+    <strong>Comment:</strong>
+    <%= comment.comment %>
+  </p>
+<% end %>
 
 
 <%= link_to 'Edit', edit_piece_path(@piece) %> |

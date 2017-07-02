@@ -13,13 +13,15 @@
 <h2>Comments</h2>
 <% @piece.comments.each do |comment| %>
   <p>
-    <strong>Comment <%= comment.id %>:</strong>
+    <strong>Comment #<%= comment.id %>:</strong>
     <%= comment.comment %>
+    <br>
+    <strong>Added:</strong> <%= time_ago_in_words(comment.created_at) %> ago
   </p>
 <% end %>
 
 <h2>Add a comment:</h2>
-
+<%= render 'comments/form', comment: @comment %>
 
 
 <%= link_to 'Edit', edit_piece_path(@piece) %> |

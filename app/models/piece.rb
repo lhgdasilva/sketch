@@ -1,3 +1,4 @@
 class Piece < ApplicationRecord
-  has_many :comments
+  validates :name, presence: true
+  #has_many :comments
 end

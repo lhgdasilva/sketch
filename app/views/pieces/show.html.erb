@@ -11,13 +11,15 @@
 </p>
 
 <h2>Comments</h2>
+<% i = 1 %>
 <% @piece.comments.each do |comment| %>
   <p>
-    <strong>Comment #<%= comment.id %>:</strong>
+    <strong>Comment #<%= i %>:</strong>
     <%= comment.comment %>
     <br>
     <strong>Added:</strong> <%= time_ago_in_words(comment.created_at) %> ago
   </p>
+  <% i += 1 %>
 <% end %>
 
 <h2>Add a comment:</h2>

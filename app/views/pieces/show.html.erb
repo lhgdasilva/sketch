@@ -1,5 +1,11 @@
 <p id="notice"><%= notice %></p>
+<style>
+* {
+  padding-left: 4em;
+  padding-right: 4em;
+}
 
+</style>
 <p>
   <strong>Name:</strong>
   <%= @piece.title %>
@@ -27,4 +33,4 @@
 
 
 
-<button class="btn btn-secondary"><%= link_to 'Back', pieces_path%></button>
+<button class="btn btn-block"><%= link_to 'Back', pieces_path%></button>

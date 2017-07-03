@@ -22,9 +22,9 @@
   <% i += 1 %>
 <% end %>
 
-<h2>Add a comment:</h2>
+<h2>Add comment:</h2>
 <%= render 'comments/form', comment: @comment, id: @piece.id %>
 
 
-<%= link_to 'Edit', edit_piece_path(@piece) %> |
+
 <%= link_to 'Back', pieces_path %>

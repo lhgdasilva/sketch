@@ -28,7 +28,7 @@ class CommentsController < ApplicationController
     respond_to do |format|
       if @comment.save
         saved = true
-        format.html { redirect_back fallback_location: 'pieces/#{@comment.piece_id}', notice: 'Comment was successfully created.', status: 302 }
+        format.html { redirect_back fallback_location: 'pieces/#{@comment.piece_id}', status: 302 }
         format.json { render :show, status: :created, location: @comment }
       else
         format.html { render :new }
@@ -42,7 +42,7 @@ class CommentsController < ApplicationController
   def update
     respond_to do |format|
       if @comment.update(comment_params)
-        format.html { redirect_to @comment, notice: 'Comment was successfully updated.' }
+        format.html { redirect_to @comment }
         format.json { render :show, status: :ok, location: @comment }
       else
         format.html { render :edit }

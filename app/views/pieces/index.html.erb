@@ -21,15 +21,15 @@
 
 <br>
 
-<table style="width:100%">
-  <tbody class="col-md-4">
+<div class="container">
+  <div class="row">
     <% @pieces.each do |piece| %>
-      <tr>
-        <td><%= link_to image_tag(piece.url), piece %></td>
-      </tr>
+      <div class="col-md-4">
+        <%= link_to image_tag(piece.url), piece %>
+      </div>
     <% end %>
-  </tbody>
-</table>
+  </div>
+</div>
 
 <br>
 

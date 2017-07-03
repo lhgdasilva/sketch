@@ -17,8 +17,14 @@
   </div>
 
   <div class="field">
-    <%= form.label :piece_id %>
-    <%= form.text_field :piece_id, id: :comment_piece_id %>
+    <% if id != nil %>
+    <%= form.label :piece_id, style: "display:none;" %>
+
+      <%= form.text_field :piece_id, id: :comment_piece_id, value: id, style: "display:none;" %>
+    <% else %>
+      <%= form.label :piece_id %>
+      <%= form.text_field :piece_id, id: :comment_piece_id %>
+    <% end %>
   </div>
 
   <div class="actions">

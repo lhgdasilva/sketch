@@ -5,14 +5,14 @@
   <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-  <a class="navbar-brand" href="#">Sketch.com</a>
+  <a class="navbar-brand" href="#">Sketcher</a>
   <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav">
       <li></li>
       <li></li>
       <li></li>
       <li class="nav-item">
-        <a class="nav-link" href="/pieces/new/">Create</a>
+        <a class="nav-link" href="/pieces/new/">Upload</a>
       </li>
     </ul>
   </div>
@@ -24,7 +24,7 @@
 <div class="container">
   <div class="row">
     <% @pieces.each do |piece| %>
-      <div class="col-md-4">
+      <div class="card">
         <%= link_to image_tag(piece.url), piece %>
       </div>
     <% end %>

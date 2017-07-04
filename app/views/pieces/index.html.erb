@@ -24,11 +24,11 @@
 <div class="container">
   <div class="row">
     <% @pieces.each do |piece| %>
-      <div class="card">
-        <%= link_to image_tag(piece.url), piece %>
+      <div class="col-md-3">
+        <%= link_to image_tag(piece.url), piece%>
       </div>
     <% end %>
-  </div>
+  <!-- </div> -->
 </div>
 
 <br>

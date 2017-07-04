@@ -1,4 +1,30 @@
-<h1>New Piece</h1>
+<style>
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
-<%= render 'form', piece: @piece %>
-<button class="btn btn-secondary"><%= link_to 'Back', pieces_path%></button>
+.header {
+  padding-top: 1em;
+}
+
+.actions {
+  text-align: center;
+  padding-top: 0.5em;
+  padding-bottom: 1em;
+}
+</style>
+
+<div class="header">
+  <h1>New Piece</h1>
+</div>
+
+<div>
+  <%= render 'form', piece: @piece %>
+</div>
+
+<div>
+  <button class="btn btn-secondary"><%= link_to 'Back', pieces_path%></button>
+</div>

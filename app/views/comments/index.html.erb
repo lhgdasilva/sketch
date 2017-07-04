@@ -17,8 +17,7 @@ h1 {
 </style>
 
 <p id="notice"><%= notice %></p>
-<button class="btn btn-block"><%= link_to 'Home', '/pieces' %></button>
-<br>
+
 <h1>Latest Comments</h1>
 
 <table>
@@ -37,7 +36,7 @@ h1 {
         <td>"<%= comment.comment %>"</td>
         <td class="two"><%= comment.piece.title %></td>
         <td class="two"> <%= time_ago_in_words(comment.created_at) %> ago</td>
-        <td><%= link_to 'See', comment.piece %></td>
+        <td><button class="btn btn-secondary"><%= link_to 'See', comment.piece %></button></td>
       </tr>
     <% end %>
   </tbody>

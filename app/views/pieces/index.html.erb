@@ -1,3 +1,17 @@
+<style>
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+* {
+  font-family: 'Roboto', sans-serif;
+}
+
+.navbar-brand {
+  margin-right: 750px;
+}
+
+
+</style>
+
 <p id="notice"><%= notice %></p>
 
 <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
@@ -8,11 +22,11 @@
   <a class="navbar-brand" href="#">Sketcher</a>
   <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav">
-      <li></li>
-      <li></li>
-      <li></li>
       <li class="nav-item">
-        <button class="btn btn-sm"><a class="nav-link" href="/pieces/new/">Upload</a></button>
+        <button class="btn btn-sm"><a class="nav-link" href="/comments/">Latest</a></button>
+      </li>
+      <li>
+        <button class="btn btn-sm" style="margin-left: 1em;"><a class="nav-link" href="/pieces/new/">Upload</a></button>
       </li>
     </ul>
   </div>

@@ -15,15 +15,15 @@
     <%= form.label :comment %>
     <%= form.text_area :comment, id: :comment_comment %>
   </div>
-
+  <% id ||= false %>
   <div class="field">
-    <% if id != nil %>
+    <% if id != false %>
     <%= form.label :piece_id, style: "display:none;" %>
 
       <%= form.text_field :piece_id, id: :comment_piece_id, value: id, style: "display:none;" %>
     <% else %>
-      <%= form.label :piece_id %>
-      <%= form.text_field :piece_id, id: :comment_piece_id %>
+      <%= form.label :piece_id, style: "display:none;" %>
+      <%= form.text_field :piece_id, id: :comment_piece_id, style: "display:none;" %>
     <% end %>
   </div>
 

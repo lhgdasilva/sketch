@@ -37,6 +37,7 @@
 
 <div class="container">
   <div class="card-columns">
+    <% @pieces = @pieces.shuffle %>
     <% @pieces.each do |piece| %>
       <div class="card">
         <%= link_to image_tag(piece.url), piece%>

@@ -48,10 +48,10 @@ img {
    <% i += 1 %>
   <% end %>
 <% end %>
-
+<div class="adding">
 <h2>Add comment:</h2>
 <%= render 'comments/form', comment: @comment, id: @piece.id %>
-
+</div>
 
 
 <button class="btn btn-block"><%= link_to 'Back', pieces_path%></button>

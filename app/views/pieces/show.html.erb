@@ -35,16 +35,18 @@ img {
   <%= image_tag @piece.url %>
 </p>
 
-<h2>Comments</h2>
-<% i = 1 %>
-<% @piece.comments.each do |comment| %>
-  <p>
+<% if @piece.comments != [] %>
+  <h2>Comments</h2>
+  <% i = 1 %>
+  <% @piece.comments.each do |comment| %>
+   <p>
     <strong>Comment #<%= i %>:</strong>
     <%= comment.comment %>
     <br>
     <strong>Added:</strong> <%= time_ago_in_words(comment.created_at) %> ago
-  </p>
-  <% i += 1 %>
+   </p>
+   <% i += 1 %>
+  <% end %>
 <% end %>
 
 <h2>Add comment:</h2>

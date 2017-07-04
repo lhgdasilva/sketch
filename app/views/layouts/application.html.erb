@@ -13,6 +13,36 @@
 <body>
 <style>
 
+body {
+  background-color: #f9f5ee;
+}
+
+.navbar{
+  margin-top: -16px;
+  background-color: #4a1cdf ;
+  border-color: #4018c2 ;
+  background-image:-webkit-gradient(linear, left 0%, left 100%, from(#6c46e8 ), to(#4a1cdf ));
+  background-image: -webkit-linear-gradient(top, #6c46e8 , 0%, #4a1cdf , 100%);
+  background-image: -moz-linear-gradient(top, #6c46e8 0%, #4a1cdf 100%);
+  background-image: linear-gradient(to bottom, #6c46e8 0%, #4a1cdf 100%);
+  background-repeat: repeat-x;
+  display: flex;
+}
+
+.navbar-brand{
+  margin-right: 90%;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: white;
+}
+
+button{
+  background-color: #c5b3f0 ;
+  font-family: sans-serif;
+  display: flex;
+}
+
   .card-columns {
     @include media-breakpoint-only(lg) {
       column-count: 4;
@@ -44,9 +74,7 @@ img:hover {
   box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
 }
 
-body {
-  background-color: #f9f5ee;
-}
+
 </style>
 <%= yield %>
 </body>

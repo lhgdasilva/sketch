@@ -11,6 +11,29 @@
 
 </head>
 <body>
+
+  <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
+    <div class="container">
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-brand" href="#"><%= link_to image_tag("brushstroke.png", class: "logo")%>
+  </a>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li class="nav-item">
+          <button class="btn btn-sm "><a class="nav-link" href="/pieces/new/">Upload</a></button>
+        </li>
+      </ul>
+    </div>
+    </div>
+  </nav>
+
+  <br>
+
 <style>
 
 body {
@@ -18,7 +41,6 @@ body {
 }
 
 .navbar{
-  margin-top: -16px;
   background-color: #4a1cdf ;
   border-color: #4018c2 ;
   background-image:-webkit-gradient(linear, left 0%, left 100%, from(#6c46e8 ), to(#4a1cdf ));
@@ -30,9 +52,12 @@ body {
 }
 
 .navbar-brand{
-  margin-right: 90%;
+  /*margin-right: 90%;*/
+  float: left;
 }
-
+#navbarNav{
+  margin-left: 800px;
+}
 .navbar-light .navbar-nav .nav-link {
     color: white;
 }
@@ -48,7 +73,7 @@ button{
       column-count: 4;
     }
     @include media-breakpoint-only(xl) {
-      column-count: 5;
+      column-count: 1;
     }
   }
 
@@ -57,24 +82,37 @@ button{
     border: 0px  }
 
 
-img {
+/*img {
   display: block;
   margin: auto;
   margin-bottom: 5%;
   border: 1px solid #ddd; /* Gray border */
-  border-radius: 4px;  /* Rounded border */
+  /*border-radius: 4px;  /* Rounded border */
+  /*padding: 0px; /* Some padding */
+
+  /*min-width: 50%;
+  max-height: 800px;*/
+/*}*/
+
+img:hover {
+  box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+}
+img.logo{
+  max-width: inherit;
+}
+img.card{
+  display: block;
+  /*margin: auto;*/
+  margin-bottom: 5%;
+  border: 1px solid #ddd; /* Gray border */
+  border-radius: 10px;  /* Rounded border */
   padding: 0px; /* Some padding */
   /*width: 100%; /* Set a small width */*/
   /*min-height: 160px;*/
   min-width: 50%;
-  max-width: 80%;
+  max-width: 95%;
   max-height: 800px;
 }
-img:hover {
-  box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
-}
-
-
 </style>
 <%= yield %>
 </body>

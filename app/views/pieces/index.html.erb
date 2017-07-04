@@ -1,31 +1,12 @@
 <p id="notice"><%= notice %></p>
 
-<nav class="navbar navbar-toggleable-md navbar-light bg-faded">
-  <div class="container">
-  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <a class="navbar-brand" href="#">Sketcher</a>
-  <div class="collapse navbar-collapse" id="navbarNav">
-    <ul class="navbar-nav">
-      <li></li>
-      <li></li>
-      <li></li>
-      <li class="nav-item">
-        <button class="btn btn-sm"><a class="nav-link" href="/pieces/new/">Upload</a></button>
-      </li>
-    </ul>
-  </div>
-  </div>
-</nav>
 
-<br>
 
 <div class="container">
   <div class="card-columns">
     <% @pieces.each do |piece| %>
       <div class="card">
-        <%= link_to image_tag(piece.url), piece%>
+        <%= link_to image_tag(piece.url, class: "card"), piece%>
       </div>
     <% end %>
   <!-- </div> -->

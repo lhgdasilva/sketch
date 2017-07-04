@@ -4,7 +4,9 @@ class CommentsController < ApplicationController
   # GET /comments
   # GET /comments.json
   def index
-    @comments = Comment.all
+   @page = (params[:page] || 1).to_i
+   skip = (@page - 1) * 25
+   @comments = Comment.order(created_at: :desc).limit(25).offset(skip).all
   end
 
   # GET /comments/1

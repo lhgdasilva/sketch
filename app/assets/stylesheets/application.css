@@ -13,10 +13,4 @@
  *= require_tree .
  *= require_self
  */
- background-color{
-   color: #f9f5ee
- }
-
-.lucas-style{
-  color: blue;
-}
+@import bootstrap;

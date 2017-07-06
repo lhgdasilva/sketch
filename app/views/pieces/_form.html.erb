@@ -3,6 +3,9 @@
     <div id="error_explanation">
       <h2>You forgot something!</h2>
     </div>
+  <% else %>
+    <div id="error_explanation">
+    </div>
   <% end %>
 
   <div class="field">
@@ -18,4 +21,5 @@
   <div class="actions">
     <%= form.submit "Create" %>
   </div>
+
 <% end %>

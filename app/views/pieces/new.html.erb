@@ -9,6 +9,11 @@ body {
   align-items: center;
 }
 
+#error_explanation  {
+  
+  margin-bottom: 1em;
+}
+
 .navbar.navbar-toggleable-md.navbar-light {
   width: 100%;
 }
@@ -31,13 +36,18 @@ ul.navbar-nav{
   margin-left: 550px;
 }
 
+input {
+  margin-left: auto;
+  margin-right: auto;
+}
+
 </style>
 
 <div class="header">
   <h1>New Piece</h1>
 </div>
 
-<div>
+<div class="whole">
   <%= render 'form', piece: @piece %>
 </div>
 

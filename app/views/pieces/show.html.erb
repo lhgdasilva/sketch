@@ -37,6 +37,20 @@ img {
 ul.navbar-nav {
   margin-left: 550px;
 }
+
+.box {
+  background-color: ghostwhite;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 1em;
+  border: black 1px solid;
+  width: 500px;
+  justify-content: center;
+}
+
+.btn-block {
+  border: 0.5px black solid;
+}
 </style>
 
 <p>
@@ -45,10 +59,10 @@ ul.navbar-nav {
 </p>
 
 <p>
-
   <%= image_tag @piece.url %>
 </p>
 
+<div class="box">
 <% if @piece.comments != [] %>
   <h2>Comments</h2>
   <% i = 1 %>
@@ -57,11 +71,12 @@ ul.navbar-nav {
     <strong>Comment #<%= i %>:</strong>
     <%= comment.comment %>
     <br>
-    <strong>Added:</strong> <%= time_ago_in_words(comment.created_at) %> ago
+    <strong>Added:</strong> <em><%= time_ago_in_words(comment.created_at) %> ago</em>
    </p>
    <% i += 1 %>
   <% end %>
 <% end %>
+</div>
 <div class="adding">
 <h2>Add comment:</h2>
 <%= render 'comments/form', comment: @comment, id: @piece.id %>

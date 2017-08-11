@@ -1,5 +1,42 @@
-<h1>New Comment</h1>
+<style>
+h2, li {
+  color: red;
+}
 
-<%= render 'form', comment: @comment %>
+.nav-item {
+  padding-left: 550px;
+}
 
-<%= link_to 'Back', comments_path %>
+.main {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+textarea {
+  padding-left: 10em;
+}
+
+.actions {
+  display: flex;
+  justify-content: center;
+}
+
+input {
+  margin-bottom: 0.5em;
+}
+</style>
+
+<div class="main">
+  <div>
+    <h1>New Comment</h1>
+  </div>
+  <div>
+    <%= render 'form', comment: @comment %>
+  </div>
+  <div>
+    <button class="btn"><%= link_to 'Back', piece_path(@comment.piece_id) %></button>
+  </div>
+</div>

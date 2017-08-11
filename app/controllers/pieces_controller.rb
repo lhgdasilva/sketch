@@ -1,6 +1,10 @@
 class PiecesController < ApplicationController
   before_action :set_piece, only: [:show, :edit, :update, :destroy]
-
+  # before_action :authenticate_with_http_basic, only: :new
+  #
+  # authenticate_with_http_basic do |name, password|
+  #   User.all.include?(name) && User.find_by(name).password == password
+  # end
   # GET /pieces
   # GET /pieces.json
   def index
@@ -10,6 +14,7 @@ class PiecesController < ApplicationController
   # GET /pieces/1
   # GET /pieces/1.json
   def show
+    @comment = Comment.new
   end
 
   # GET /pieces/new

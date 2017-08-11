@@ -1,29 +1,28 @@
+<style>
+* {
+  font-family: 'Roboto', sans-serif;
+}
+
+.navbar-brand {
+  margin-right: 750px;
+}
+
+</style>
+
 <p id="notice"><%= notice %></p>
 
-<h1>Pieces</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Url</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
+<div class="container">
+  <div class="card-columns">
+    <% @pieces = @pieces.shuffle %>
     <% @pieces.each do |piece| %>
-      <tr>
-        <td><%= piece.title %></td>
-        <td><%= image_tag piece.url %></td>
-        <td><%= link_to 'Show', piece %></td>
-        <td><%= link_to 'Edit', edit_piece_path(piece) %></td>
-        <td><%= link_to 'Destroy', piece, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+      <div class="card">
+        <%= link_to image_tag(piece.url, class: "card"), piece%>
+      </div>
     <% end %>
-  </tbody>
-</table>
+  </div>
+</div>
 
 <br>
 
-<%= link_to 'New Piece', new_piece_path %>
+<a class="jump_up" href="#"><type="button" class="btn btn-secondary btn-lg btn-block">Top</button></a>
